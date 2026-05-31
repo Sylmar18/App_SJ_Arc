@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atrações</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<h1>🎤 Atrações</h1>
+</header>
+
+<div class="container">
+
+<input
+type="text"
+id="buscar"
+placeholder="Buscar artista..."
+class="campo-busca"
+>
+
+<div id="lista-artistas">
+
+<div class="artista">
+<img src="img/joao-gomes.jpg">
+<div>
+<h3>João Gomes ❤️</h3>
+<p>21:00 • Polo Multicultural</p>
+</div>
+</div>
+
+<div class="artista">
+<img src="img/wesley.jpg">
+<div>
+<h3>Wesley Safadão ❤️</h3>
+<p>23:00 • Polo Multicultural</p>
+</div>
+</div>
+
+<div class="artista">
+<img src="img/alceu.jpg">
+<div>
+<h3>Alceu Valença ❤️</h3>
+<p>22:00 • Polo Raízes</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+const busca = document.getElementById("buscar");
+
+busca.addEventListener("keyup", () => {
+
+const texto = busca.value.toLowerCase();
+
+document.querySelectorAll(".artista").forEach(card => {
+
+card.style.display =
+card.innerText.toLowerCase().includes(texto)
+? "flex"
+: "none";
+
+});
+
+});
+</script>
+
+</body>
+</html>

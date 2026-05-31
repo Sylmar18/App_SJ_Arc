@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<h1>🏆 Quiz</h1>
+</header>
+
+<div class="quiz">
+
+<h2>
+Qual o principal evento cultural de Arcoverde?
+</h2>
+
+<button onclick="responder(true)">
+São João de Arcoverde
+</button>
+
+<button onclick="responder(false)">
+Carnaval
+</button>
+
+<button onclick="responder(false)">
+Festa da Uva
+</button>
+
+<button onclick="responder(false)">
+Micareta
+</button>
+
+<p id="resultado"></p>
+
+</div>
+
+<script>
+
+function responder(correta){
+
+let resultado =
+document.getElementById("resultado");
+
+if(correta){
+
+resultado.innerHTML =
+"✅ Resposta correta!";
+
+}else{
+
+resultado.innerHTML =
+"❌ Tente novamente.";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
