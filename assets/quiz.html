@@ -1,65 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz</title>
-<link rel="stylesheet" href="css/style.css">
+
+<title>Quiz Arcoverde</title>
+
+<link rel="stylesheet" href="../css/quiz.css">
+
 </head>
+
 <body>
 
-<header>
-<h1>🏆 Quiz</h1>
+<header class="quiz-topo">
+
+<h1>🏆 Quiz de Arcoverde</h1>
+
+<p>Teste seus conhecimentos</p>
+
 </header>
 
-<div class="quiz">
+<div class="quiz-container">
 
-<h2>
-Qual o principal evento cultural de Arcoverde?
-</h2>
+<form id="quizForm">
 
-<button onclick="responder(true)">
-São João de Arcoverde
-</button>
+<!-- PERGUNTA 1 -->
 
-<button onclick="responder(false)">
-Carnaval
-</button>
+<div class="pergunta">
 
-<button onclick="responder(false)">
-Festa da Uva
-</button>
+<h3>1. Como Arcoverde é conhecida?</h3>
 
-<button onclick="responder(false)">
-Micareta
-</button>
-
-<p id="resultado"></p>
+<label><input type="radio" name="q1" value="a"> Cidade do Frevo</label>
+<label><input type="radio" name="q1" value="b"> Portal do Sertão</label>
+<label><input type="radio" name="q1" value="c"> Capital do Xote</label>
+<label><input type="radio" name="q1" value="d"> Terra do Maracatu</label>
 
 </div>
 
-<script>
+<!-- PERGUNTA 2 -->
 
-function responder(correta){
+<div class="pergunta">
 
-let resultado =
-document.getElementById("resultado");
+<h3>2. Em qual estado fica Arcoverde?</h3>
 
-if(correta){
+<label><input type="radio" name="q2" value="a"> Ceará</label>
+<label><input type="radio" name="q2" value="b"> Bahia</label>
+<label><input type="radio" name="q2" value="c"> Pernambuco</label>
+<label><input type="radio" name="q2" value="d"> Paraíba</label>
 
-resultado.innerHTML =
-"✅ Resposta correta!";
+</div>
 
-}else{
+<!-- PERGUNTA 3 -->
 
-resultado.innerHTML =
-"❌ Tente novamente.";
+<div class="pergunta">
 
-}
+<h3>3. Qual importante meio de transporte impulsionou o crescimento da cidade?</h3>
 
-}
+<label><input type="radio" name="q3" value="a"> Aeroporto</label>
+<label><input type="radio" name="q3" value="b"> Ferrovia</label>
+<label><input type="radio" name="q3" value="c"> Porto</label>
+<label><input type="radio" name="q3" value="d"> Metrô</label>
 
-</script>
+</div>
+
+<!-- PERGUNTA 4 -->
+
+<div class="pergunta">
+
+<h3>4. Qual dança tradicional tem forte ligação com Arcoverde?</h3>
+
+<label><input type="radio" name="q4" value="a"> Samba</label>
+<label><input type="radio" name="q4" value="b"> Tango</label>
+<label><input type="radio" name="q4" value="c"> Xaxado</label>
+<label><input type="radio" name="q4" value="d"> Valsa</label>
+
+</div>
+
+<!-- PERGUNTA 5 -->
+
+<div class="pergunta">
+
+<h3>5. Qual festa atrai milhares de visitantes?</h3>
+
+<label><input type="radio" name="q5" value="a"> Carnaval</label>
+<label><input type="radio" name="q5" value="b"> Oktoberfest</label>
+<label><input type="radio" name="q5" value="c"> São João</label>
+<label><input type="radio" name="q5" value="d"> Festa do Peão</label>
+
+</div>
+
+<!-- PERGUNTA 6 -->
+
+<div class="pergunta">
+
+<h3>6. Arcoverde marca a transição entre quais regiões?</h3>
+
+<label><input type="radio" name="q6" value="a"> Litoral e Sertão</label>
+<label><input type="radio" name="q6" value="b"> Agreste e Sertão</label>
+<label><input type="radio" name="q6" value="c"> Zona da Mata e Litoral</label>
+<label><input type="radio" name="q6" value="d"> Norte e Sul</label>
+
+</div>
+
+<!-- PERGUNTA 7 -->
+
+<div class="pergunta">
+
+<h3>7. Qual polo é o principal do São João?</h3>
+
+<label><input type="radio" name="q7" value="a"> Polo Cultural</label>
+<label><input type="radio" name="q7" value="b"> Polo Gastronômico</label>
+<label><input type="radio" name="q7" value="c"> Polo Multicultural</label>
+<label><input type="radio" name="q7" value="d"> Polo Infantil</label>
+
+</div>
+
+<!-- PERGUNTA 8 -->
+
+<div class="pergunta">
+
+<h3>8. Como era conhecido o povoado que deu origem à cidade?</h3>
+
+<label><input type="radio" name="q8" value="a"> Olho d'Água dos Bredos</label>
+<label><input type="radio" name="q8" value="b"> Serra Verde</label>
+<label><input type="radio" name="q8" value="c"> Vila Nova</label>
+<label><input type="radio" name="q8" value="d"> Pedra Branca</label>
+
+</div>
+
+<!-- PERGUNTA 9 -->
+
+<div class="pergunta">
+
+<h3>9. Qual é um dos símbolos turísticos da cidade?</h3>
+
+<label><input type="radio" name="q9" value="a"> Cristo Redentor</label>
+<label><input type="radio" name="q9" value="b"> Cruzeiro Novo</label>
+<label><input type="radio" name="q9" value="c"> Pelourinho</label>
+<label><input type="radio" name="q9" value="d"> Elevador Lacerda</label>
+
+</div>
+
+<!-- PERGUNTA 10 -->
+
+<div class="pergunta">
+
+<h3>10. Qual ritmo é muito presente na cultura local?</h3>
+
+<label><input type="radio" name="q10" value="a"> Rock</label>
+<label><input type="radio" name="q10" value="b"> Blues</label>
+<label><input type="radio" name="q10" value="c"> Forró</label>
+<label><input type="radio" name="q10" value="d"> Jazz</label>
+
+</div>
+
+<button type="button" onclick="corrigirQuiz()">
+
+Finalizar Quiz
+
+</button>
+
+</form>
+
+<div id="resultado"></div>
+
+</div>
+
+<script src="../js/quiz.js"></script>
 
 </body>
 </html>

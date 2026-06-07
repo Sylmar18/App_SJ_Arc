@@ -10,13 +10,11 @@ slides[atual].classList.remove("active");
 atual++;
 
 if(atual >= slides.length){
-
 atual = 0;
-
 }
 
 slides[atual].classList.add("active");
 
 }
 
-setInterval(trocarSlide,4000);
+setInterval(trocarSlide,3000);

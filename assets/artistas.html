@@ -1,74 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Atrações</title>
-<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="../css/style.css">
+
 </head>
+
 <body>
 
-<header>
-<h1>🎤 Atrações</h1>
+<div class="bandeirinhas">
+
+    <span class="b vermelho"></span>
+    <span class="b amarelo"></span>
+    <span class="b verde"></span>
+    <span class="b azul"></span>
+
+    <span class="b vermelho"></span>
+    <span class="b amarelo"></span>
+    <span class="b verde"></span>
+    <span class="b azul"></span>
+
+</div>
+
+<header class="topo">
+
+    <h1>🎤 Atrações</h1>
+
+    <p>Confira os artistas do São João</p>
+
 </header>
 
-<div class="container">
+<section class="cordel-card">
 
-<input
-type="text"
-id="buscar"
-placeholder="Buscar artista..."
-class="campo-busca"
->
+    <h2>🔥 Destaques da Noite</h2>
 
-<div id="lista-artistas">
+    <p>
+        Os maiores nomes do forró e da música nordestina.
+    </p>
 
-<div class="artista">
-<img src="img/joao-gomes.jpg">
-<div>
-<h3>João Gomes ❤️</h3>
-<p>21:00 • Polo Multicultural</p>
+</section>
+
+<div class="container-artistas">
+
+    <div class="artista-item">
+
+        <h3>🎤 João Gomes ❤️</h3>
+
+        <p>🕘 21:00</p>
+
+        <p>📍 Polo Multicultural</p>
+
+    </div>
+
+    <div class="artista-item">
+
+        <h3>🎶 Alceu Valença ❤️</h3>
+
+        <p>🕚 23:00</p>
+
+        <p>📍 Polo Multicultural</p>
+
+    </div>
+
+    <div class="artista-item">
+
+        <h3>🪗 Limão com Mel</h3>
+
+        <p>🕗 20:00</p>
+
+        <p>📍 Polo Multicultural</p>
+
+    </div>
+
+    <div class="artista-item">
+
+        <h3>🎵 Flávio José</h3>
+
+        <p>🕙 22:00</p>
+
+        <p>📍 Polo Raízes do Coco</p>
+
+    </div>
+
 </div>
-</div>
 
-<div class="artista">
-<img src="img/wesley.jpg">
-<div>
-<h3>Wesley Safadão ❤️</h3>
-<p>23:00 • Polo Multicultural</p>
-</div>
-</div>
+<nav class="bottom-nav">
 
-<div class="artista">
-<img src="img/alceu.jpg">
-<div>
-<h3>Alceu Valença ❤️</h3>
-<p>22:00 • Polo Raízes</p>
-</div>
-</div>
+<a href="index.html">🏠</a>
 
-</div>
+<a href="programação.html">📅</a>
 
-</div>
+<a href="artistas.html">🎤</a>
 
-<script>
-const busca = document.getElementById("buscar");
+<a href="turismo.html">📍</a>
 
-busca.addEventListener("keyup", () => {
+<a href="quiz.html">🏆</a>
 
-const texto = busca.value.toLowerCase();
-
-document.querySelectorAll(".artista").forEach(card => {
-
-card.style.display =
-card.innerText.toLowerCase().includes(texto)
-? "flex"
-: "none";
-
-});
-
-});
-</script>
+</nav>
 
 </body>
+
 </html>

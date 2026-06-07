@@ -1,0 +1,801 @@
+:root{
+    --roxo:#5A2472;
+    --roxoEscuro:#421857;
+    --bege:#F7E8C6;
+    --marrom:#6A3B18;
+    --verde:#0F766E;
+    --amarelo:#F2C66D;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:var(--roxo);
+    color:white;
+    padding-bottom:100px;
+}
+
+/* BANDEIRINHAS */
+
+
+.bandeirinhas{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:5px;
+
+    padding:5px 0;
+
+    background:#5A2472;
+
+    border-bottom:3px solid white;
+    position: relative;
+}
+
+.b{
+
+    width:30px;
+
+    height:40px;
+
+    clip-path:polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+}
+
+.vermelho{
+    background:#ff4d4d;
+}
+
+.amarelo{
+    background:#ffd93d;
+}
+
+.verde{
+    background:#51cf66;
+}
+
+.azul{
+    background:#4dabf7;
+}
+.b{
+
+    width:30px;
+
+    height:40px;
+
+    clip-path:polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+animation:balancar 1.5s infinite ease-in-out;
+transform-origin:top center;
+}
+@keyframes balancar{
+
+    0%{
+        transform:rotate(-5deg);
+    }
+
+    50%{
+        transform:rotate(5deg);
+    }
+
+    100%{
+        transform:rotate(-5deg);
+    }
+}
+.bandeirinhas::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:white;
+}
+
+/* TOPO JUNINO */
+
+.topo{
+    background:linear-gradient(
+        180deg,
+        #6A2D84,
+        #4A1764
+    );
+
+    text-align:center;
+
+    padding:25px 15px;
+
+    border-bottom:4px solid #F2C66D;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+
+.topo h1{
+    color:#F2C66D;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.topo p{
+    color:white;
+    font-size:1rem;
+}
+.hero{
+
+    height:280px;
+
+    background-image:url('../img/praca-jose-rabelo.jpg');
+
+    background-size:auto;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    margin:15px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+.hero-overlay{
+
+width:100%;
+
+height:100%;
+
+background:
+rgba(0,0,0,.45);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+}
+
+.hero-btn{
+
+background:#F2C66D;
+
+border:none;
+
+padding:12px 20px;
+
+margin-top:15px;
+
+border-radius:12px;
+
+font-weight:bold;
+}
+
+/* CARROSSEL */
+
+.carousel{
+    width:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide{
+    display:none;
+}
+
+.slide.active{
+    display:block;
+}
+
+
+.carousel{
+
+    margin:15px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:5px solid #F2C66D;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.slide img{
+
+    width:100%;
+
+    height:350px;
+
+    
+
+    object-position:center;
+
+    display:block;
+}
+
+.slide-info{
+
+    background:#F7E8C6;
+
+    color:#222;
+
+    padding:15px;
+}
+
+
+/* SHOW */
+
+.destaque-show{
+    padding:15px;
+}
+
+.destaque-show h2{
+    margin-bottom:10px;
+}
+
+.show-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        #F7E8C6,
+        #F2C66D
+    );
+
+    color:#222;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    border:4px solid #6A3B18;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+.show-card::before,
+.cordel-card::before{
+
+content:"🌽";
+
+position:absolute;
+
+top:-15px;
+
+right:10px;
+
+font-size:28px;
+}
+.show-card,
+.atalho,
+.cordel-card{
+
+transition:.3s;
+}
+
+.show-card:hover,
+.atalho:hover,
+.cordel-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 25px rgba(0,0,0,.3);
+}
+/* ATALHOS */
+.atalhos{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+
+    padding:15px;
+}
+
+.atalho{
+
+    background:#F7E8C6;
+
+    border:3px solid #6A3B18;
+
+    border-radius:20px;
+
+    text-decoration:none;
+
+    color:#222;
+
+    font-weight:bold;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.atalho:hover{
+
+    transform:scale(1.03);
+}
+
+   
+/* CORDEL */
+
+.cordel-card{
+
+    background:#F7E8C6;
+
+    color:#222;
+
+    margin:15px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    border:4px solid #6A3B18;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+
+/* MENU */
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#4A1764;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    padding:15px;
+
+    border-top:4px solid #F2C66D;
+
+    box-shadow:0 -4px 15px rgba(0,0,0,.3);
+}
+
+.bottom-nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:24px;
+}
+.indicadores{
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+margin-top:10px;
+}
+.container-artistas{
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.artista-item{
+
+    background:#F7E8C6;
+
+    color:#222;
+
+    border:4px solid #6A3B18;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+
+    transition:.3s;
+}
+
+.artista-item:hover{
+
+    transform:translateY(-3px);
+}
+
+.artista-item h3{
+
+    color:#5A2472;
+
+    margin-bottom:10px;
+}
+
+.artista-item p{
+
+    margin-top:5px;
+}
+/* PROGRAMAÇÃO */
+
+.container-programacao{
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.evento{
+
+    background:#F7E8C6;
+
+    color:#222;
+
+    border:4px solid #6A3B18;
+
+    border-radius:20px;
+
+    padding:15px;
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+
+    transition:.3s;
+}
+
+.evento:hover{
+
+    transform:translateY(-3px);
+}
+
+.hora{
+
+    background:#5A2472;
+
+    color:white;
+
+    padding:10px;
+
+    border-radius:12px;
+
+    min-width:70px;
+
+    text-align:center;
+
+    font-weight:bold;
+}
+/* TURISMO */
+
+.container-turismo{
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.ponto{
+
+    background:#F7E8C6;
+
+    color:#222;
+
+    border:4px solid #6A3B18;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+
+    transition:.3s;
+}
+
+.ponto:hover{
+
+    transform:translateY(-3px);
+}
+
+.ponto h3{
+
+    color:#5A2472;
+
+    margin-bottom:10px;
+}
+
+.btn-turismo{
+
+    margin-top:15px;
+
+    width:100%;
+
+    background:#5A2472;
+
+    color:white;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+.container-food{
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.food-card{
+
+    background:#F7E8C6;
+
+    color:#222;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    border:4px solid #6A3B18;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+.container-moto{
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.moto-card{
+
+    background:#F7E8C6;
+
+    color:#222;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    border:4px solid #6A3B18;
+}
+
+.btn-whats{
+
+    display:block;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    margin-top:10px;
+
+    background:#25D366;
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+}
+
+/* POLOS */
+
+.container-polos{
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.polo-card{
+
+    background:#F7E8C6;
+
+    color:#222;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    border:4px solid #6A3B18;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+
+    transition:.3s;
+}
+
+.polo-card:hover{
+
+    transform:translateY(-3px);
+}
+
+.polo-card h3{
+
+    color:#5A2472;
+
+    margin-bottom:10px;
+}
+/* HISTÓRIA */
+
+.container-historia{
+
+    padding:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.historia-card{
+
+    background:#F7E8C6;
+
+    color:#222;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    border:4px solid #6A3B18;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.25);
+
+    transition:.3s;
+}
+
+.historia-card:hover{
+
+    transform:translateY(-3px);
+}
+
+.historia-card h3{
+
+    color:#5A2472;
+
+    margin-bottom:10px;
+}
+.dot{
+
+width:12px;
+
+height:12px;
+
+background:#fff;
+
+opacity:.4;
+
+border-radius:50%;
+}
+
+.active-dot{
+
+opacity:1;
+
+background:#F2C66D;
+}
+.fogueira{
+
+text-align:center;
+
+font-size:32px;
+
+animation:fogo 1s infinite alternate;
+}
+
+@keyframes fogo{
+
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.1);
+}
+}
+/* MOBILE */
+
+@media(max-width:480px){
+
+.topo h1{
+    font-size:1.8rem;
+}
+
+.slide img{
+    height:220px;
+}
+
+.atalho{
+    padding:15px;
+}
+
+.bottom-nav a{
+    font-size:20px;
+}
+
+@media(max-width:480px){
+
+    .hero{
+        height:220px;
+    }
+
+    .slide img{
+        height:220px;
+    }
+
+}
+}
