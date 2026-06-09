@@ -148,7 +148,7 @@ transform-origin:top center;
 
     background-image:url('../img/praca-jose-rabelo.jpg');
 
-    background-size:auto;
+    background-size:contain;
 
     background-position:center center;
 
@@ -771,23 +771,24 @@ transform:scale(1.1);
 
 @media(max-width:480px){
 
-.topo h1{
+ .topo h1{
     font-size:1.8rem;
-}
+ }
 
-.slide img{
+ .slide img{
     height:220px;
-}
+    object-fit: contain;
+ }
 
-.atalho{
+ .atalho{
     padding:15px;
-}
+ }
 
-.bottom-nav a{
+ .bottom-nav a{
     font-size:20px;
-}
+ }
 
-@media(max-width:480px){
+  @media(max-width:480px){
 
     .hero{
         height:220px;
@@ -797,5 +798,8 @@ transform:scale(1.1);
         height:220px;
     }
 
-}
+
+  }
+
+
 }
